@@ -1,0 +1,46 @@
+.home-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home-section {
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.home-section-header {
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem;
+}
+
+.home-section-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.home-questions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .home-questions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .home-questions-grid {
+        grid-template-columns: 1fr;
+    }
+}
