@@ -28,27 +28,20 @@ You can use the following users to log in and test the application:
 | zoshikanlu | pass246 | Zenobia Oshikanlu |
 
 ### Start the Application
-
 To launch the application in development mode, run:
-
 ```bash
 npm start
 ```
-
 The app will be available at `http://localhost:5173`.
 
 ### Run Tests
-
 To execute the unit tests, run:
-
 ```bash
 npm test
 ```
-
 The project includes more than 10 tests covering data functions, components, and logic.
 
 ## Features
-
 - Login/Logout system with user impersonation.
 - Homepage with Answered and Unanswered poll categories.
 - Poll details page with voting and results.

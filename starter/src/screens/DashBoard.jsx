@@ -15,15 +15,6 @@ function DashBoard() {
 
     const question = questions[id]
     
-    if (!authedUser) {
-        return (
-            <>
-                <Navbar />
-                <div style={{textAlign: 'center', marginTop: '50px'}}>Please log in to view the poll.</div>
-            </>
-        )
-    }
-
     if (!question) {
         return (
             <>

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Essential Component Tests matches Login component snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="auth-page"
+  >
+    <div
+      class="auth-container"
+    >
+      <h1
+        class="auth-title"
+      >
+        Log In
+      </h1>
+      <form
+        class="auth-form"
+      >
+        <select
+          class="auth-input"
+          style="padding: 0.75rem; width: 100%; margin-bottom: 1rem; border: 1px solid rgb(221, 221, 221); border-radius: 4px;"
+        >
+          <option
+            disabled=""
+            value=""
+          >
+            Select User
+          </option>
+        </select>
+        <input
+          class="auth-input"
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+        <button
+          class="auth-button"
+          disabled=""
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
