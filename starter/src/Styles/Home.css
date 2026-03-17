@@ -8,29 +8,28 @@
 }
 
 .home-section {
-    border: 1px solid #e5e7eb;
-    border-radius: 4px;
-    background-color: white;
+    border: none;
+    background-color: transparent;
 }
 
 .home-section-header {
-    text-align: center;
-    border-bottom: 1px solid #e5e7eb;
-    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 1rem 0 0.5rem 0;
 }
 
 .home-section-header h2 {
     margin: 0;
-    font-size: 1.25rem;
-    color: #1f2937;
-    font-weight: 600;
+    font-size: 1.5rem;
+    color: #374151;
+    font-weight: 500;
 }
 
 .home-questions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
 @media (max-width: 768px) {

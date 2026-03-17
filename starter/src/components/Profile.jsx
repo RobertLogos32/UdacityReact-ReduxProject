@@ -11,9 +11,9 @@ function Profile() {
     return (
         <div className="profile-wrapper">
             <img 
-              src={user.avatarURL || `https://ui-avatars.com/api/?name=${user.name}&background=random`} 
-              alt={`Avatar of ${user.name}`} 
-              style={{width: 30, height: 30, borderRadius: '50%', objectFit: 'cover'}}
+              src={user.avatarURL} 
+              alt={user.id} 
+              style={{width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover', display: 'block'}}
             />
             <p style={{margin: 0}}>{user.name}</p>
         </div>

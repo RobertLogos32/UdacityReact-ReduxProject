@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { handleAddQuestion } from '../actions/shared'
 import Navbar from '../components/Navbar'
+import '../Styles/New.css'
 
 function New() {
     const [optionOne, setOptionOne] = useState('')
@@ -33,27 +34,27 @@ function New() {
     return (
         <>
             <Navbar />
-            <div className="new-poll-container" style={{maxWidth: '600px', margin: '2rem auto', textAlign: 'center'}}>
+            <div className="new-poll-container">
                 <h2>Would You Rather</h2>
-                <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+                <form onSubmit={handleSubmit} className="new-poll-form">
                     <input 
                         type="text" 
                         placeholder="Option One" 
                         value={optionOne}
                         onChange={(e) => setOptionOne(e.target.value)}
-                        style={{padding: '0.75rem', borderRadius: '4px', border: '1px solid #ccc'}}
+                        className="new-poll-input"
                     />
                     <input 
                         type="text" 
                         placeholder="Option Two" 
                         value={optionTwo}
                         onChange={(e) => setOptionTwo(e.target.value)}
-                        style={{padding: '0.75rem', borderRadius: '4px', border: '1px solid #ccc'}}
+                        className="new-poll-input"
                     />
                     <button 
                         type="submit" 
                         disabled={!optionOne || !optionTwo}
-                        style={{padding: '0.75rem', backgroundColor: '#10b981', color: 'white', border: 'none', borderRadius: '4px', cursor: optionOne && optionTwo ? 'pointer' : 'not-allowed'}}
+                        className="new-poll-button"
                     >
                         Submit
                     </button>

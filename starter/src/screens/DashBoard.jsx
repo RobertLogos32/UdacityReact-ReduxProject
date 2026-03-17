@@ -36,19 +36,16 @@ function DashBoard() {
         dispatch(handleAddAnswer(id, option))
     }
 
-    // Calculations for results if answered
-    const totalVotes = question.optionOne.votes.length + question.optionTwo.votes.length
-    const optionOnePercent = totalVotes === 0 ? 0 : Math.round((question.optionOne.votes.length / totalVotes) * 100)
-    const optionTwoPercent = totalVotes === 0 ? 0 : Math.round((question.optionTwo.votes.length / totalVotes) * 100)
-
-    const avatarSrc = author.avatarURL || `https://ui-avatars.com/api/?name=${author.name}&background=random&size=250`
-
     return (
         <>
             <Navbar />
             <div className="poll-detail-container">
                 <h2 className="poll-author-title">Poll by {author.id}</h2>
-                <img src={avatarSrc} alt={`Avatar of ${author.name}`} className="poll-avatar" />
+                <img 
+                    src={author.avatarURL} 
+                    alt={author.id} 
+                    className="poll-avatar" 
+                />
                 
                 <h3 className="poll-question-title">Would You Rather</h3>
 
@@ -62,16 +59,12 @@ function DashBoard() {
                                 Click
                             </button>
                         ) : (
-                            <div className={`poll-results ${hasAnsweredOptionOne ? 'selected-result' : ''}`} style={{padding: '1rem', backgroundColor: hasAnsweredOptionOne ? '#ecfdf5' : '#f9fafb', flex: 1, borderTop: '1px solid #e5e7eb'}}>
-                                {hasAnsweredOptionOne && <div style={{color: '#059669', fontWeight: 'bold', marginBottom: '0.5rem'}}>✓ Your Vote</div>}
-                                <div className="poll-result-bar-bg">
-                                    <div className="poll-result-bar-fill" style={{width: `${optionOnePercent}%`}}>
-                                        {optionOnePercent}%
-                                    </div>
-                                </div>
-                                <div className="poll-meta">
-                                    {question.optionOne.votes.length} out of {totalVotes} votes
-                                </div>
+                            <div className="poll-results">
+                                {hasAnsweredOptionOne ? (
+                                    <div className="result-label selected-label">✓ Selected</div>
+                                ) : (
+                                    <div className="result-label unselected-label">Not selected</div>
+                                )}
                             </div>
                         )}
                     </div>
@@ -85,16 +78,12 @@ function DashBoard() {
                                 Click
                             </button>
                         ) : (
-                            <div className={`poll-results ${hasAnsweredOptionTwo ? 'selected-result' : ''}`} style={{padding: '1rem', backgroundColor: hasAnsweredOptionTwo ? '#ecfdf5' : '#f9fafb', flex: 1, borderTop: '1px solid #e5e7eb'}}>
-                                {hasAnsweredOptionTwo && <div style={{color: '#059669', fontWeight: 'bold', marginBottom: '0.5rem'}}>✓ Your Vote</div>}
-                                <div className="poll-result-bar-bg">
-                                    <div className="poll-result-bar-fill" style={{width: `${optionTwoPercent}%`}}>
-                                        {optionTwoPercent}%
-                                    </div>
-                                </div>
-                                <div className="poll-meta">
-                                    {question.optionTwo.votes.length} out of {totalVotes} votes
-                                </div>
+                            <div className="poll-results">
+                                {hasAnsweredOptionTwo ? (
+                                    <div className="result-label selected-label">✓ Selected</div>
+                                ) : (
+                                    <div className="result-label unselected-label">Not selected</div>
+                                )}
                             </div>
                         )}
                     </div>

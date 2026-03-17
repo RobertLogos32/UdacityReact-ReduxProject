@@ -16,8 +16,8 @@ function TableSection({ id }) {
             <td>
                 <div className="user-info-cell">
                     <img 
-                      src={user.avatarURL || `https://ui-avatars.com/api/?name=${user.name}&background=random`} 
-                      alt={`Avatar of ${user.name}`} 
+                      src={user.avatarURL} 
+                      alt={user.id} 
                       style={{width: 40, height: 40, borderRadius: '50%', backgroundColor: '#e5e7eb', objectFit: 'cover'}} 
                     />
                     <div className="user-details">

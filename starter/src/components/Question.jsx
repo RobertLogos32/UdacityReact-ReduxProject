@@ -22,7 +22,14 @@ function Question({ id }) {
 
     return (
         <div className="question-card">
-            <h3 className="question-name">{author.id}</h3>
+            <div className="question-header">
+                <img 
+                    src={author.avatarURL} 
+                    alt={author.id} 
+                    className="question-avatar" 
+                />
+                <h3 className="question-name">{author.id}</h3>
+            </div>
             <p className="question-time">{formattedDate}</p>
             <Link to={`/questions/${id}`} style={{textDecoration: 'none'}}>
                 <button className="question-button">Show</button>
