@@ -1,69 +1,70 @@
 .leaderboard-container {
-    max-width: 1000px;
-    margin: 2rem auto;
+    max-width: 900px;
+    margin: 3rem auto;
     padding: 0 1rem;
 }
 
 .leaderboard-table-wrapper {
-    background-color: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .leaderboard-table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
 }
 
 .leaderboard-table th,
 .leaderboard-table td {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    text-align: left;
 }
 
 .leaderboard-table th {
-    background-color: #f9fafb;
-    font-weight: 600;
-    color: #374151;
-    font-size: 0.95rem;
-}
-
-.leaderboard-table tbody tr:last-child td {
-    border-bottom: none;
+    background-color: transparent;
+    font-weight: 500;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 1.5rem;
 }
 
 .leaderboard-table tbody tr:hover {
-    background-color: #f9fafb;
+    background-color: #fafafa;
 }
 
 .user-info-cell {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.user-details {
+.user-text-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .user-name {
-    font-weight: 600;
-    color: #111827;
+    font-weight: 500;
+    color: #374151;
     font-size: 1rem;
     margin: 0;
 }
 
 .user-handle {
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 0.85rem;
     margin: 0;
 }
 
 .stat-cell {
-    color: #374151;
-    font-weight: 500;
+    color: #4b5563;
+    font-weight: 400;
+    font-size: 1rem;
 }
+

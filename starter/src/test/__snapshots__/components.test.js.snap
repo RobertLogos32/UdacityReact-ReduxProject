@@ -45,3 +45,81 @@ exports[`Essential Component Tests matches Login component snapshot 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Essential Component Tests matches Navbar component snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar-container"
+  >
+    <ul
+      class="navbar-list"
+    >
+      <li
+        class="navbar-item"
+      >
+        <a
+          class="navbar-link"
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="navbar-item"
+      >
+        <a
+          class="navbar-link"
+          data-discover="true"
+          href="/leaderboard"
+        >
+          Leaderboard
+        </a>
+      </li>
+      <li
+        class="navbar-item"
+      >
+        <a
+          class="navbar-link"
+          data-discover="true"
+          href="/new"
+        >
+          New
+        </a>
+      </li>
+      <li
+        class="navbar-item"
+        style="margin-left: auto;"
+      >
+        <div
+          class="navbar-link navbar-profile-link"
+          style="cursor: default;"
+        >
+          <div
+            class="profile-wrapper"
+          >
+            <img
+              alt="sarahedo"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block;"
+            />
+            <p
+              style="margin: 0px;"
+            >
+              Sarah Edo
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        class="navbar-item"
+      >
+        <button
+          class="navbar-button"
+        >
+          Logout
+        </button>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

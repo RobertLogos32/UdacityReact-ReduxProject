@@ -5,6 +5,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { createStore } from 'redux'
 import rootReducer from '../reducers'
 import Login from '../screens/Login'
+import Navbar from '../components/Navbar'
 
 describe('Essential Component Tests', () => {
     it('matches Login component snapshot', () => {
@@ -36,5 +37,28 @@ describe('Essential Component Tests', () => {
         fireEvent.change(select, { target: { value: 'sarahedo' } })
         expect(select.value).toBe('sarahedo')
     })
-})
 
+    it('matches Navbar component snapshot', () => {
+        const preloadedState = { authedUser: 'sarahedo', users: { sarahedo: { id: 'sarahedo', name: 'Sarah Edo', avatarURL: null } } }
+        const { asFragment } = render(
+            <Provider store={createStore(rootReducer, preloadedState)}>
+                <MemoryRouter>
+                    <Navbar />
+                </MemoryRouter>
+            </Provider>
+        )
+        expect(asFragment()).toMatchSnapshot()
+    })
+
+    it('displays the correct user name in Navbar', () => {
+        const preloadedState = { authedUser: 'sarahedo', users: { sarahedo: { id: 'sarahedo', name: 'Sarah Edo', avatarURL: null } } }
+        render(
+            <Provider store={createStore(rootReducer, preloadedState)}>
+                <MemoryRouter>
+                    <Navbar />
+                </MemoryRouter>
+            </Provider>
+        )
+        expect(screen.getByText(/Sarah Edo/i)).toBeInTheDocument()
+    })
+})

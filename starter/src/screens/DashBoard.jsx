@@ -32,6 +32,13 @@ function DashBoard() {
     const hasAnsweredOptionTwo = question.optionTwo.votes.includes(authedUser)
     const hasAnswered = hasAnsweredOptionOne || hasAnsweredOptionTwo
 
+    const optionOneVotes = question.optionOne.votes.length
+    const optionTwoVotes = question.optionTwo.votes.length
+    const totalVotes = optionOneVotes + optionTwoVotes
+
+    const optionOnePercentage = totalVotes > 0 ? Math.round((optionOneVotes / totalVotes) * 100) : 0
+    const optionTwoPercentage = totalVotes > 0 ? Math.round((optionTwoVotes / totalVotes) * 100) : 0
+
     const handleVote = (option) => {
         dispatch(handleAddAnswer(id, option))
     }
@@ -50,7 +57,7 @@ function DashBoard() {
                 <h3 className="poll-question-title">Would You Rather</h3>
 
                 <div className="poll-options-container">
-                    <div className="poll-option-card">
+                    <div className={`poll-option-card${hasAnsweredOptionOne ? ' selected' : ''}`}>
                         <div className="poll-option-text">
                             {question.optionOne.text}
                         </div>
@@ -60,16 +67,16 @@ function DashBoard() {
                             </button>
                         ) : (
                             <div className="poll-results">
-                                {hasAnsweredOptionOne ? (
-                                    <div className="result-label selected-label">✓ Selected</div>
-                                ) : (
-                                    <div className="result-label unselected-label">Not selected</div>
+                                {hasAnsweredOptionOne && (
+                                    <div className="result-label selected-label">✓ Your vote</div>
                                 )}
+                                <p className="poll-votes">{optionOneVotes} {optionOneVotes === 1 ? 'vote' : 'votes'}</p>
+                                <p className="poll-percentage">{optionOnePercentage}%</p>
                             </div>
                         )}
                     </div>
 
-                    <div className="poll-option-card">
+                    <div className={`poll-option-card${hasAnsweredOptionTwo ? ' selected' : ''}`}>
                         <div className="poll-option-text">
                             {question.optionTwo.text}
                         </div>
@@ -79,11 +86,11 @@ function DashBoard() {
                             </button>
                         ) : (
                             <div className="poll-results">
-                                {hasAnsweredOptionTwo ? (
-                                    <div className="result-label selected-label">✓ Selected</div>
-                                ) : (
-                                    <div className="result-label unselected-label">Not selected</div>
+                                {hasAnsweredOptionTwo && (
+                                    <div className="result-label selected-label">✓ Your vote</div>
                                 )}
+                                <p className="poll-votes">{optionTwoVotes} {optionTwoVotes === 1 ? 'vote' : 'votes'}</p>
+                                <p className="poll-percentage">{optionTwoPercentage}%</p>
                             </div>
                         )}
                     </div>

@@ -4,7 +4,7 @@ This project is a React/Redux application that allows employees to create and an
 
 ## Installation
 
-1.  Clone the repository or download the source code.
+1.  Download the source code.
 2.  Navigate to the project directory:
     ```bash
     cd starter
@@ -20,12 +20,12 @@ This project is a React/Redux application that allows employees to create and an
 
 You can use the following users to log in and test the application:
 
-| User ID | Password | Name |
-|---------|----------|------|
-| sarahedo | password123 | Sarah Edo |
-| tylermcginnis | abc321 | Tyler McGinnis |
-| mtsamis | xyz123 | Mike Tsamis |
-| zoshikanlu | pass246 | Zenobia Oshikanlu |
+| User ID       | Password    | Name              |
+| ------------- | ----------- | ----------------- |
+| sarahedo      | password123 | Sarah Edo         |
+| tylermcginnis | abc321      | Tyler McGinnis    |
+| mtsamis       | xyz123      | Mike Tsamis       |
+| zoshikanlu    | pass246     | Zenobia Oshikanlu |
 
 ### Start the Application
 

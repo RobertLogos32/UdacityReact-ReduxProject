@@ -39,67 +39,88 @@
 .poll-option-card {
     flex: 1;
     min-width: 250px;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    border: 1px solid #ccc;
     background-color: white;
     display: flex;
     flex-direction: column;
 }
 
 .poll-option-text {
-    padding: 1.5rem;
-    font-size: 1.1rem;
-    color: #374151;
-    min-height: 80px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .poll-option-button {
-    background-color: transparent;
-    color: #6b7280;
+    background-color: #eee;
+    color: black;
     border: none;
-    border-top: 1px solid #e5e7eb;
-    padding: 1rem;
+    border-top: 1px solid #ccc;
+    padding: 0.75rem;
     font-size: 1rem;
-    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
     width: 100%;
 }
 
 .poll-option-button:hover:not(:disabled) {
-    background-color: #f9fafb;
-    color: #374151;
+    background-color: #ddd;
 }
 
 .poll-option-button:disabled {
     cursor: not-allowed;
-    background-color: #f3f4f6;
-    color: #9ca3af;
+    background-color: #eee;
+    color: gray;
 }
 
 .poll-results {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
-    border-top: 1px solid #e5e7eb;
-    background-color: #f9fafb;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    background-color: #fafafa;
 }
 
 .result-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .selected-label {
-    color: #10b981;
-    font-weight: 600;
+    color: green;
+    font-weight: bold;
 }
 
 .unselected-label {
-    color: #9ca3af;
-    font-weight: 400;
+    color: gray;
+}
+
+.poll-option-card.selected {
+    border: 2px solid green;
+    background-color: #f0fff0;
+}
+
+.poll-option-card.selected .poll-results {
+    background-color: transparent;
+    border-top-color: green;
+}
+
+.poll-votes {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.poll-percentage {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
 }

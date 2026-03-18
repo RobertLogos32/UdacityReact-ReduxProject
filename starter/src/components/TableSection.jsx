@@ -18,9 +18,9 @@ function TableSection({ id }) {
                     <img 
                       src={user.avatarURL} 
                       alt={user.id} 
-                      style={{width: 40, height: 40, borderRadius: '50%', backgroundColor: '#e5e7eb', objectFit: 'cover'}} 
+                      style={{width: 42, height: 42, borderRadius: '50%', objectFit: 'cover'}} 
                     />
-                    <div className="user-details">
+                    <div className="user-text-info">
                         <p className="user-name">{user.name}</p>
                         <p className="user-handle">{user.id}</p>
                     </div>
